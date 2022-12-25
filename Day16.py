@@ -4,16 +4,19 @@
 # A match statement will compare a given variable’s value to different shapes, also referred to as the pattern. The main idea is to keep on comparing the variable with all the present patterns until it fits into one.
 
 
-x = int(input("Enter the value of x: "))
-# x is the variable to match
-match x:
-    # if x is 0
-    case 0:
-        print("x is zero")
-    # case with if-condition
-    case 4:
-        print("case is 4")
-    case _ if x != 90:
-        print(x, "is not 90")
-    case _:  # _ is default match
-        print(x, "is not 80")
+# x = int(input("Enter the value of x: "))
+# # x is the variable to match
+# match x:
+#     # if x is 0
+#     case 0:
+#         print("x is zero")
+#     # case with if-condition
+#     case 4:
+#         print("case is 4")
+#     case _ if x != 90:
+#         print(x, "is not 90")
+#     case _:  # _ is default match
+#         print(x, "is not 80")
+
+
+
