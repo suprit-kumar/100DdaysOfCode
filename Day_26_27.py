@@ -18,11 +18,10 @@ def kbc():
         inp = input("Type the answer of the above question:  ")
         if inp.lower() in answers:
             correct_answers = correct_answers + 1
+    print("*****************-------------------------*****************")
     if correct_answers == len(questions):
-        print("*****************-------------------------*****************")
         print(f"Congratulations!!! . You have won the prize money of Rs. {prize_money}/-")
     else:
-        print("*****************-------------------------*****************")
         print(f"Better luck next time!!!...You have only {correct_answers} correct answers.")
 
 kbc()
