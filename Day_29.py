@@ -77,4 +77,18 @@ def find_fibonacci(n):
             count += 1
 
 
-find_fibonacci(13)
+# find_fibonacci(13)
+
+
+# Recursion
+def fibonacci_recursive(n):
+    if n < 0:
+        print("Please enter a positive integer, the given number is not valid")
+    elif n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci_recursive(n-1) + fibonacci_recursive(n-2)
+
+print(fibonacci_recursive(6))
