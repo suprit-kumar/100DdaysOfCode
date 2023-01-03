@@ -24,4 +24,5 @@ def func1():
 
 
 x = func1()
+
 print(x)
