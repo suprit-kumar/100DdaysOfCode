@@ -35,12 +35,12 @@ def simple_encode_decode(word='', type=None):
     if type == 'encode':
         return f"{random_string(length)}{rest_character}{first_character}{random_string(length)}"
     if type == 'decode':
-        main_str = word[3:-3]
+        main_str = word[length:-length]
         get_last_one = main_str[-1:]
         rest_str = main_str[:-1]
         return f"{get_last_one}{rest_str}"
 
-output = simple_encode_decode(word='mfuavascriptjtyh', type='decode')
+output = simple_encode_decode(word='uqbythonpkld', type='decode')
 
 
 print(output)
