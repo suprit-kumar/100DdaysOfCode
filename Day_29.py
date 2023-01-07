@@ -60,24 +60,24 @@ def find_factorial_recursively(n):
 
 # Normal Function
 def find_fibonacci(n):
-    n_1 = 0
-    n_2 = 1
-    count = 0
     if n <= 0:
         print("Please enter a positive integer, the given number is not valid")
-    elif n == 1:
-        print(n_1)
+        return
+    n1 = 0
+    n2 = 1
+    count = 0
+    if n == 1:
+        print(n1)
     else:
         print("The fibonacci sequence of the numbers is:")
         while count <= n:
-            print(n_1)
-            nth = n_1 + n_2
-            n_1 = n_2
-            n_2 = nth
+            print(n1)
+            nth = n1 + n2
+            n1, n2 = n2, nth
             count += 1
 
 
-# find_fibonacci(13)
+find_fibonacci(0)
 
 
 # Recursion
@@ -89,6 +89,6 @@ def fibonacci_recursive(n):
     elif n == 1:
         return 1
     else:
-        return fibonacci_recursive(n-1) + fibonacci_recursive(n-2)
+        return fibonacci_recursive(n - 1) + fibonacci_recursive(n - 2)
 
-print(fibonacci_recursive(6))
+# print(fibonacci_recursive(6))
