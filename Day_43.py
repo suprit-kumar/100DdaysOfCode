@@ -10,7 +10,7 @@ interacting with the file system, and running system commands.
 
 import os
 if(not os.path.exists("data")):
-    os.mknod(f"{os.getcwd()}/data.py")
+    os.mknod(f"{os.getcwd()}/Day_{44}.py")
 
 
 
@@ -25,5 +25,5 @@ import os
 
 # Get a list of the files in the current directory
 files = os.listdir(".")
-print(files)
+# print(files)
 
