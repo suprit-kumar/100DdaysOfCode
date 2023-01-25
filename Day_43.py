@@ -10,7 +10,7 @@ interacting with the file system, and running system commands.
 
 import os
 if(not os.path.exists("data")):
-    os.mknod(f"{os.getcwd()}/Day_{53}.py")
+    os.mknod(f"{os.getcwd()}/Day_{54}.py")
 
 
 
