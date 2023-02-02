@@ -15,11 +15,15 @@ class Library:
 
     def add_book(self, book):
         self.books.append(book)
-        print(f"All Books: {self.books}")
     def books_count(self):
         print(f"Total books count: {len(self.books)}")
+        for book in self.books:
+            print(book)
 
 
 addBook = Library()
 addBook.add_book("physics")
+addBook.add_book("Math")
+addBook.add_book("Bio")
+addBook.add_book("History")
 addBook.books_count()
