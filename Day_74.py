@@ -13,27 +13,23 @@ It can also add custom data, viewing options, and passwords to PDF files.
 pypdf can retrieve text and metadata from PDFs as well.
 """
 
-from PyPDF2 import PdfFileReader
+from PyPDF2 import PdfWriter,PdfReader
 import os
 
-class PdfFunctionalitis:
-    def __init__(self):
-        self.data = None
-
-    def get_info(self,filepath):
-        with open(filepath, 'rb') as f:
-            pdf = PdfFileReader(f)
-        info = pdf.getDocumentInfo()
-        number_of_pages = pdf.getNumPages()
-        print(f"File Info: {info}")
-        author = info.author
-        creator = info.creator
-        producer = info.producer
-        subject = info.subject
-        title = info.title
-        print(f"Number of pages: {number_of_pages}")
-        print(f"author: {author} | creator: {creator} | producer: {producer} | subject: {subject} | title:{title}")
+merger = PdfWriter()
+reader = PdfReader("sample.pdf")
+number_of_pages = len(reader.pages)
+page = reader.pages[0]
+text = page.extract_text()
+print(number_of_pages)
+print(page)
+print(text)
 
 
-pdf_func = PdfFunctionalitis()
-pdf_func.get_info('sample.pdf')
+files = [file for file in os.listdir() if file.endswith(".pdf")]
+
+for pdf in files:
+    merger.append(pdf)
+
+merger.write("merged.pdf")
+merger.close()
