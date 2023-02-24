@@ -9,12 +9,12 @@ import time
 import playsound
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
-mytext = ["Rahul", "Nishant", "Harry"]
+names = ["Rahul", "Nishant", "Harry"]
 
 language = 'en'
 
 count = 1
-for text in mytext:
+for text in names:
     myobj = gTTS(text=f"shout out {text}", lang=language, slow=False)
     myobj.save(f"{text}_{count}.mp3")
     count+=1
@@ -27,4 +27,10 @@ for file in mp3files:
     time.sleep(1)
 
 
+# OR
+# ----
 
+
+from os import system
+for name in names:
+    system(f"say Shoutout to {name} ")
