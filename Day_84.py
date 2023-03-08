@@ -3,18 +3,12 @@ Write a python program which reminds you of drinking water every hour or two.
 Your program can either beep or send desktop notifications for a specific operating system
 """
 
-from plyer import notification
-
+import os
 import time
-from plyer import notification
 
-if __name__ == "__main__":
-    notification.notify(
-        title="Drink Water",
-        message="Drinking water will always keep you Hydrated",
+REPEAT_INTERVAL = 60  # Repeat frequency in seconds
 
-        # displaying time
-        timeout=2
-    )
-    # waiting time
-    time.sleep(4)
+while True:
+    command = "osascript -e \'say \"Hey Harry drink water\"\'; osascript -e \'display alert \"Hey Harry, Drink water\"\'"
+    os.system(command)
+    time.sleep(REPEAT_INTERVAL)
